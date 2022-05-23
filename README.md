@@ -173,7 +173,7 @@ various shapes a `package-lock.json` file can exhibit.
 Some things we explicitly don't support, but may choose to expand support
 for over time:
 
-- Providing a `yarn-vendor` equivalent (or `pnpm-vendor` for that matter)
+- Providing a `yarn-mod` equivalent (or `pnpm-mod` for that matter)
 - Support `lockfileVersion=1` for the `npm` package lock format (only
   `lockfileVersion=2` is supported)
 
