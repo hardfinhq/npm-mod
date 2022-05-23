@@ -1,0 +1,46 @@
+{
+  "node_modules": {
+    "node_modules/@ampproject/remapping": {
+      "url": "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.1.2.tgz",
+      "algorithm": "sha512",
+      "hash": "hoyByceqwKirw7w3Z7gnIIZC3Wx3J484Y3L/cMpXFbr7d9ZQj2mODrirNzcJa+SM3UlpWXYvKV4RlRpFXlWgXg=="
+    },
+    "node_modules/@babel/code-frame": {
+      "url": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.16.7.tgz",
+      "algorithm": "sha512",
+      "hash": "iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg=="
+    },
+    "node_modules/@babel/compat-data": {
+      "url": "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.17.7.tgz",
+      "algorithm": "sha512",
+      "hash": "p8pdE6j0a29TNGebNm7NzYZWB3xVZJBZ7XGs42uAKzQo8VQ3F0By/cQCtUEABwIqw5zo6WA4NbmxsfzADzMKnQ=="
+    }
+  },
+  "url": {
+    "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.1.2.tgz": {
+      "url": "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.1.2.tgz",
+      "algorithm": "sha512",
+      "hash": "hoyByceqwKirw7w3Z7gnIIZC3Wx3J484Y3L/cMpXFbr7d9ZQj2mODrirNzcJa+SM3UlpWXYvKV4RlRpFXlWgXg=="
+    },
+    "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.16.7.tgz": {
+      "url": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.16.7.tgz",
+      "algorithm": "sha512",
+      "hash": "iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg=="
+    },
+    "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.17.7.tgz": {
+      "url": "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.17.7.tgz",
+      "algorithm": "sha512",
+      "hash": "p8pdE6j0a29TNGebNm7NzYZWB3xVZJBZ7XGs42uAKzQo8VQ3F0By/cQCtUEABwIqw5zo6WA4NbmxsfzADzMKnQ=="
+    },
+    "https://registry.npmjs.org/@babel/core/-/core-7.17.9.tgz": {
+      "url": "https://registry.npmjs.org/@babel/core/-/core-7.17.9.tgz",
+      "algorithm": "sha512",
+      "hash": "5ug+SfZCpDAkVp9SFIZAzlW18rlzsOcJGaetCjkySnrXXDUw9AR8cDUm1iByTmdWM6yxX6/zycaV76w3YTF2gw=="
+    },
+    "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz": {
+      "url": "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz",
+      "algorithm": "sha512",
+      "hash": "b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw=="
+    }
+  }
+}
