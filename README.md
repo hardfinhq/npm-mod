@@ -161,14 +161,8 @@ a dependency could be done as follows:
   package version updates needed
 - Delete any or all of `vendor/`, `node_modules/`, `package-lock.json` and
   `.npm-mod.tidy.json` to ensure all desired package updates happen
-- Run `npm-mod tidy` again to switch back to
+- Run `npm-mod tidy` again to switch back to `file:vendor/...` references
 - Run `npm-mod unvendor` again to download newly added or changed packages
-
-## Why Vendor?
-
-- "Airplane mode"
-- Audit
-- This is for **application** `package.json`, does not apply to a library
 
 ## Caveats
 
