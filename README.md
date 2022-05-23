@@ -166,7 +166,7 @@ a dependency could be done as follows:
 
 ## Caveats
 
-The primary goal of this project is to enable a thought experiment in `npm`
+The primary goal of this project is to enable an experiment in `npm`
 packaging. As a result, the CLI may have incomplete support for all of the
 various shapes a `package-lock.json` file can exhibit.
 
