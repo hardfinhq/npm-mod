@@ -145,6 +145,8 @@ accepts-1.3.8.tgz
 ...
 yargs-parser-20.2.9.tgz
 yocto-queue-0.1.0.tgz
+$ ls -1 vendor/ | wc -l
+    1135
 ```
 
 ## `npm-mod unvendor` Subcommand
