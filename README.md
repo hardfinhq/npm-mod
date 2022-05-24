@@ -179,5 +179,64 @@ for over time:
 - Support `lockfileVersion=1` for the `npm` package lock format (only
   `lockfileVersion=2` is supported)
 
+## Install Performance
+
+This tool is not intended to improve performance in the steady state case.
+The performance boost from "no network required" is roughly equivalent to
+the performance boost from using `~/.npm/_cacache`.
+
+Starting with the `~/.npm/_cacache` directory empty, installing the
+packages needed for the basic `create-react-app` sample takes around 10.5
+seconds:
+
+```bash
+$ rm -fr ~/.npm/_cacache/
+$ time npm ci
+...
+
+added 1393 packages, and audited 1394 packages in 10s
+
+...
+
+real    0m10.370s
+user    0m13.952s
+sys     0m6.959s
+```
+
+On a second run, the global `npm` cache reduces the time to around 4.5 seconds:
+
+```bash
+$ rm -fr ./node_modules/
+$ time npm ci
+...
+
+added 1393 packages, and audited 1394 packages in 4s
+
+...
+
+real    0m4.318s
+user    0m4.809s
+sys     0m5.909s
+```
+
+After running `npm-mod tidy` and `vendor`, the install time is roughly
+the same:
+
+```bash
+$ rm -fr ./node_modules/
+$ npm-mod tidy
+$ npm-mod vendor
+$ time npm ci
+...
+
+added 1393 packages, and audited 1394 packages in 4s
+
+...
+
+real    0m4.456s
+user    0m5.112s
+sys     0m5.802s
+```
+
 [1]: https://reactjs.org/docs/create-a-new-react-app.html
 [2]: https://engineering.hardfin.com/2022/05/npm-mod/
