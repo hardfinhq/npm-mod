@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-$ go install github.com/hardfinhq/npm-mod/cmd/npm-mod@v1.20220523.1
+$ go install github.com/hardfinhq/npm-mod/cmd/npm-mod@v1.20220526.1
 ```
 
 ## `npm-mod tidy` Subcommand
