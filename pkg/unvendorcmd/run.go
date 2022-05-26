@@ -12,6 +12,31 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package tidy implements utilities for the `npm-mod tidy` subcommand; in
-// particular for creating a `.npm-mod.tidy.json` file.
-package tidy
+package unvendorcmd
+
+import (
+	"context"
+	"os"
+
+	"github.com/hardfinhq/npm-mod/pkg/npmmod"
+)
+
+// Run executes the `npm-mod unvendor` command.
+func Run(_ context.Context) error {
+	here, err := os.Getwd()
+	if err != nil {
+		return err
+	}
+
+	root, err := npmmod.Locate(here)
+	if err != nil {
+		return err
+	}
+
+	tf, err := npmmod.ReadTidyFile(root)
+	if err != nil {
+		return err
+	}
+
+	return tf.Restore()
+}

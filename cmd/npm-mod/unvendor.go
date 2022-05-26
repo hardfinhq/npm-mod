@@ -19,7 +19,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hardfinhq/npm-mod/pkg/unvendor"
+	"github.com/hardfinhq/npm-mod/pkg/unvendorcmd"
 )
 
 func unvendorSubcommand(ctx context.Context) *cobra.Command {
@@ -29,7 +29,7 @@ func unvendorSubcommand(ctx context.Context) *cobra.Command {
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		RunE: func(_ *cobra.Command, _ []string) error {
-			return unvendor.Run(ctx)
+			return unvendorcmd.Run(ctx)
 		},
 	}
 

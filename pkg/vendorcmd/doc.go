@@ -12,31 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package vendor
-
-import (
-	"context"
-	"os"
-
-	"github.com/hardfinhq/npm-mod/pkg/npmmod"
-)
-
-// Run executes the `npm-mod vendor` command.
-func Run(ctx context.Context) error {
-	here, err := os.Getwd()
-	if err != nil {
-		return err
-	}
-
-	root, err := npmmod.Locate(here)
-	if err != nil {
-		return err
-	}
-
-	tf, err := npmmod.ReadTidyFile(root)
-	if err != nil {
-		return err
-	}
-
-	return fetchPackageArchives(ctx, tf)
-}
+// Package vendorcmd implements utilities for the `npm-mod vendor` subcommand;
+// in particular for reading a `.npm-mod.tidy.json` file and then downloading
+// and storing local package archives in `vendor/`.
+package vendorcmd

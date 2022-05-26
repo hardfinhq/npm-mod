@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package unvendor
+package tidycmd
 
 import (
 	"context"
@@ -21,7 +21,7 @@ import (
 	"github.com/hardfinhq/npm-mod/pkg/npmmod"
 )
 
-// Run executes the `npm-mod unvendor` command.
+// Run executes the `npm-mod tidy` command.
 func Run(_ context.Context) error {
 	here, err := os.Getwd()
 	if err != nil {
@@ -33,10 +33,20 @@ func Run(_ context.Context) error {
 		return err
 	}
 
-	tf, err := npmmod.ReadTidyFile(root)
+	tf, err := npmmod.GenerateTidyFile(root)
 	if err != nil {
 		return err
 	}
 
-	return tf.Restore()
+	err = tf.Persist()
+	if err != nil {
+		return err
+	}
+
+	err = tf.TidyPackageJSON()
+	if err != nil {
+		return err
+	}
+
+	return tf.TidyPackageLockJSON()
 }

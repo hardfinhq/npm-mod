@@ -12,41 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package tidy
-
-import (
-	"context"
-	"os"
-
-	"github.com/hardfinhq/npm-mod/pkg/npmmod"
-)
-
-// Run executes the `npm-mod tidy` command.
-func Run(_ context.Context) error {
-	here, err := os.Getwd()
-	if err != nil {
-		return err
-	}
-
-	root, err := npmmod.Locate(here)
-	if err != nil {
-		return err
-	}
-
-	tf, err := npmmod.GenerateTidyFile(root)
-	if err != nil {
-		return err
-	}
-
-	err = tf.Persist()
-	if err != nil {
-		return err
-	}
-
-	err = tf.TidyPackageJSON()
-	if err != nil {
-		return err
-	}
-
-	return tf.TidyPackageLockJSON()
-}
+// Package tidycmd implements utilities for the `npm-mod tidy` subcommand; in
+// particular for creating a `.npm-mod.tidy.json` file.
+package tidycmd

@@ -19,7 +19,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hardfinhq/npm-mod/pkg/tidy"
+	"github.com/hardfinhq/npm-mod/pkg/tidycmd"
 )
 
 func tinySubcommand(ctx context.Context) *cobra.Command {
@@ -29,7 +29,7 @@ func tinySubcommand(ctx context.Context) *cobra.Command {
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		RunE: func(_ *cobra.Command, _ []string) error {
-			return tidy.Run(ctx)
+			return tidycmd.Run(ctx)
 		},
 	}
 

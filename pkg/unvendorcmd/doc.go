@@ -12,7 +12,5 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package vendor implements utilities for the `npm-mod vendor` subcommand; in
-// particular for reading a `.npm-mod.tidy.json` file and then downloading and
-// storing local package archives in `vendor/`.
-package vendor
+// Package unvendorcmd implements the `npm-mod unvendor` subcommand.
+package unvendorcmd

@@ -19,7 +19,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hardfinhq/npm-mod/pkg/vendor"
+	"github.com/hardfinhq/npm-mod/pkg/vendorcmd"
 )
 
 func vendorSubcommand(ctx context.Context) *cobra.Command {
@@ -29,7 +29,7 @@ func vendorSubcommand(ctx context.Context) *cobra.Command {
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		RunE: func(_ *cobra.Command, _ []string) error {
-			return vendor.Run(ctx)
+			return vendorcmd.Run(ctx)
 		},
 	}
 

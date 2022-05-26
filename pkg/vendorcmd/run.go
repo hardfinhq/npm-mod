@@ -12,5 +12,31 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Package unvendor implements the `npm-mod unvendor` subcommand.
-package unvendor
+package vendorcmd
+
+import (
+	"context"
+	"os"
+
+	"github.com/hardfinhq/npm-mod/pkg/npmmod"
+)
+
+// Run executes the `npm-mod vendor` command.
+func Run(ctx context.Context) error {
+	here, err := os.Getwd()
+	if err != nil {
+		return err
+	}
+
+	root, err := npmmod.Locate(here)
+	if err != nil {
+		return err
+	}
+
+	tf, err := npmmod.ReadTidyFile(root)
+	if err != nil {
+		return err
+	}
+
+	return fetchPackageArchives(ctx, tf)
+}
