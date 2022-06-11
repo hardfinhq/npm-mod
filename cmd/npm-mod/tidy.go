@@ -22,7 +22,7 @@ import (
 	"github.com/hardfinhq/npm-mod/pkg/tidycmd"
 )
 
-func tinySubcommand(ctx context.Context) *cobra.Command {
+func tidySubcommand(ctx context.Context) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:           "tidy",
 		Short:         "Make sure the offline dependencies match the package.json",

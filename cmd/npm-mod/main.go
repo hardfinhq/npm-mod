@@ -35,7 +35,7 @@ func run() error {
 	}
 
 	cmd.AddCommand(
-		tinySubcommand(ctx),
+		tidySubcommand(ctx),
 		vendorSubcommand(ctx),
 		unvendorSubcommand(ctx),
 	)
